@@ -1,0 +1,121 @@
+/*Definiendo variables de color en css*/
+:root{
+    --body-bg-color:#262626;
+    --text-color:#f0f0f0;
+    --colorh1-color:rgb(215,211,211);
+    --fondo-proyectos:#323232; /*agregado en la clase 5: flexbox*/
+}
+    
+
+/*Aplicando variable creada en el root al body de nuestra web*/
+/*Reemplace el body con uso de variables css*/
+body{
+    display: flex;
+    flex-direction: column;
+    background: var(--body-bg-color);
+    color: var(--colorh1-color);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+h1, h2{
+    color: var(--colorh1-color);
+}
+/*Titulo del header*/
+.titulo{
+    display: flex;
+    margin: 3rem;
+}
+
+/*barra de navegacion  */
+.navigation{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0 3rem;
+}
+/*Estilo de enlaces de barra de navegacion*/
+a{
+    text-decoration: none;
+    color: #f0f0f0; /* Un gris muy claro, casi blanco */
+}
+/*Botones de navegacion*/
+.navigation li{
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+/* body{
+    background-color:#262626;
+    color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+}*/
+
+.experiencia, .estudios{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: azure;
+}
+
+.container-experiencia, .container-estudios{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin: 8rem;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Queries Agrupadas */
+
+/* Celular, pantallas pequeñas hasta 767px */
+@media (max-width: 767px){
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+}
+/* Tabletas, pantallas medianas entre 768px y 1023px */
+@media (min-widht: 768px) and (max-width: 1023px){
+    .titulo{
+        justify-content: center;
+    }
+    .navigation{
+        gap: 2rem;
+        justify-content: center;
+    }
+
+}
+/* Pantallas grandes, desde 1024px */
+@media (min-width: 1024px){
+    .titulo{
+        justify-content: flex-start;
+    }
+    .navigation{
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+}
